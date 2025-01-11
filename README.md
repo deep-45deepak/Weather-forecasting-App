@@ -51,5 +51,5 @@ Please see our [Contributing Guidelines](CONTRIBUTING.md) for more detailed info
 ---
 
 <p align="center">
-  Built with ❤️ by Deepak Kummar.😊
+  Built with ❤️ by Deepak Kumar.😊
 </p>
