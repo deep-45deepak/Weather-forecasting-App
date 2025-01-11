@@ -1,0 +1,166 @@
+/* Variables for Colors */
+:root {
+    --primary-color: #0958ae;
+    --secondary-color: #f2f2f2;
+    --text-color: #333;
+    --error-color: #e74c3c;
+    --footer-color: #3b3b3b;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Global Styles */
+body {
+    font-family: "Baloo Bhai 2", "Roboto", sans-serif;
+    /* Primary font is Baloo Bhai 2 */
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header.weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+    font-family: "Baloo Bhai 2", sans-serif;
+    /* Apply font to header */
+}
+
+header img#logo {
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+
+.weather-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.weather-main {
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.weather-main h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: "Baloo Bhai 2", sans-serif;
+    /* Use Baloo Bhai 2 for headings */
+}
+
+.weather-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 2em;
+    padding-right: 0.5em;
+}
+
+.weather-form input[type="text"] {
+    padding: 0.5rem 0 0.5em 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    width: 60%;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.weather-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+}
+
+.weather-form button:hover {
+    background-color: darkblue;
+}
+
+.weather-info.hidden {
+    display: none;
+}
+
+.weather-info h2,
+.weather-info p {
+    margin: 0.5rem 0;
+}
+
+.hidden {
+    display: none;
+    color: var(--error-color);
+    margin-top: 1rem;
+}
+
+footer.weather-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--footer-color);
+    color: white;
+    font-family: "Baloo Bhai 2", sans-serif;
+    /* Use Baloo Bhai 2 for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header img#logo {
+        height: 30px;
+    }
+
+    .weather-main {
+        padding: 1.5rem;
+    }
+
+    .weather-form input[type="text"] {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    header img#logo {
+        height: 25px;
+    }
+
+    .weather-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .weather-form input[type="text"] {
+        width: 100%;
+    }
+
+    .weather-main {
+        padding: 1rem;
+    }
+}

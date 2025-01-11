@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_K1VuQbs0fa_DNv4QfBZponQD6BIL4tmBPw&s" alt="Weather Logo">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="weather-header">
+        <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_K1VuQbs0fa_DNv4QfBZponQD6BIL4tmBPw&s" alt="Weather Logo">
+        <h1>Weather Forecast</h1>
+    </header>
+    <div class="weather-container">
+        <main class="weather-main">
+            <h2>Today's Weather Forecast</h2>
+            <form id="weather-form" class="weather-form"
+                onsubmit="console.log('Form submitted with city: ' + document.getElementById('city-input').value); return false;">
+                <input type="text" id="city-input" placeholder="Enter City Name">
+                <button type="submit" id="get-weather-btn">Get Weather</button>
+            </form>
+            <div id="weather-info" class="weather-info hidden">
+                <h2 id="city-name">City Name</h2>
+                <p id="time">Time: AM/PM</p>
+                <p id="temperature">Temperature: -- °C</p>
+                <p id="description">Description: --</p>
+                <img id="weather-icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9vPG5zD7itF9oHk6kPzJKrzmTt-UmgBG8w&s"
+                    alt="Weather Icon"
+                    onerror="console.log('Weather icon failed to load: ' + this.src);">
+            </div>
+            <p id="error-message" class="hidden">City not found. Please try again.</p>
+        </main>
+    </div>
+    <footer class="weather-footer">
+        <p>Made with 💙 by Deepak Kumar</p>
+    </footer>
+</body>
+
+</html>
