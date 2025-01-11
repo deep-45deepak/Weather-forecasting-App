@@ -12,19 +12,6 @@
     padding: 0px;
 }
 
-/* Global Styles */
-body {
-    font-family: "Baloo Bhai 2", "Roboto", sans-serif;
-    /* Primary font is Baloo Bhai 2 */
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 header.weather-header {
     display: flex;
     align-items: center;
