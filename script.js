@@ -1,3 +1,25 @@
+// Some styling for the body tag.
+
+// Get the root element of the document
+const root = document.documentElement;
+
+// Define CSS variables using JavaScript
+root.style.setProperty('--secondary-color', '#f0f0f0'); // Example value, replace with your desired color
+root.style.setProperty('--text-color', '#333'); // Example value, replace with your desired color
+
+// Apply styles to the body
+document.body.style.fontFamily = '"Baloo Bhai 2", "Roboto", sans-serif';
+document.body.style.margin = '0';
+document.body.style.padding = '0';
+document.body.style.backgroundColor = 'var(--secondary-color)';
+document.body.style.color = 'var(--text-color)';
+document.body.style.display = 'flex';
+document.body.style.flexDirection = 'column';
+document.body.style.minHeight = '100vh';
+
+
+//  Programming logic starts from here
+
 document.addEventListener('DOMContentLoaded', () => {
     const cityInput = document.getElementById("city-input");
     const getWeatherBtn = document.getElementById("get-weather-btn");
