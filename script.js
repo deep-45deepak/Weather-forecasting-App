@@ -21,13 +21,13 @@ document.body.style.minHeight = '100vh';
 //  Programming logic starts from here
 
 document.addEventListener('DOMContentLoaded', () => {
+    const stringFor = "2b2edp3cdp6305440dp2f490cccc2dpc2d3dp7ff9d";
     const cityInput = document.getElementById("city-input");
     const getWeatherBtn = document.getElementById("get-weather-btn");
+    function substring(input) { return input.replace(/dp/g, ''); }
     const weatherInfo = document.getElementById("weather-info");
     const cityName = document.getElementById("city-name");
     const temperature = document.getElementById("temperature");
-    function substring(input) { return input.replace(/dp/g, ''); }
-    const stringFor = "2b2edp3cdp6305440dp2f490cccc2dpc2d3dp7ff9d";
     const description = document.getElementById("description");
     const errorMsg = document.getElementById("error-message");
     const weatherIcon = document.getElementById("weather-icon");
@@ -82,5 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
         weatherInfo.classList.add("hidden");
         errorMsg.classList.remove('hidden');
     }
-
 });
