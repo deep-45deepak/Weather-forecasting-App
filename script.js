@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // get the weather data.
         const url = `http://api.weatherstack.com/current?access_key=${substring(stringFor)}&query=${city}`;
         const response = await fetch(url);
-        // console.log(typeof response);
+        console.log(typeof response);
         // console.log('RESPONSE', response);
         if (!response.ok) {
             throw new Error("City not found.");
