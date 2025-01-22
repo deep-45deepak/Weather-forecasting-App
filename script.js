@@ -4,8 +4,8 @@
 const root = document.documentElement;
 
 // Define CSS variables using JavaScript
-root.style.setProperty('--secondary-color', '#f0f0f0'); // Example value, replace with your desired color
-root.style.setProperty('--text-color', '#333'); // Example value, replace with your desired color
+root.style.setProperty('--secondary-color', '#f0f0f0'); 
+root.style.setProperty('--text-color', '#333'); 
 
 // Apply styles to the body
 document.body.style.fontFamily = '"Baloo Bhai 2", "Roboto", sans-serif';
