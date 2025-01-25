@@ -21,7 +21,7 @@ document.body.style.minHeight = '100vh';
 //  Programming logic starts from here
 
 document.addEventListener('DOMContentLoaded', () => {
-    const stringFor = "2bdp2edp3cdp6305dp440dp2fdp490cdpccc2dpc2d3dp7fdpf9d";
+    const stringFor = process.env.API_KEY;
     const cityInput = document.getElementById("city-input");
     const getWeatherBtn = document.getElementById("get-weather-btn");
     function substring(input) { return input.replace(/dp/g, ''); }
