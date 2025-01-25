@@ -21,10 +21,9 @@ document.body.style.minHeight = '100vh';
 //  Programming logic starts from here
 
 document.addEventListener('DOMContentLoaded', () => {
-    const stringFor = process.env.API_KEY;
+    const API_Key = process.env.API_KEY;
     const cityInput = document.getElementById("city-input");
     const getWeatherBtn = document.getElementById("get-weather-btn");
-    function substring(input) { return input.replace(/dp/g, ''); }
     const weatherInfo = document.getElementById("weather-info");
     const cityName = document.getElementById("city-name");
     const temperature = document.getElementById("temperature");
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchWeatherData(city) {
         // get the weather data.
-        const url = `http://api.weatherstack.com/current?access_key=${substring(stringFor)}&query=${city}`;
+        const url = `http://api.weatherstack.com/current?access_key=${API_Key}&query=${city}`;
         const response = await fetch(url);
         console.log(typeof response);
         // console.log('RESPONSE', response);
